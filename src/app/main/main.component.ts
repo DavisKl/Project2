@@ -45,9 +45,9 @@ export class MainComponent implements OnInit{
       if (this.base=== this.count2){
         this.result = this.amount.toFixed(2);
       }else{
-      this.currjson = data;
+        this.currjson = data;
 
-      this.result = (this.currjson.rates[this.count2]* this.amount).toFixed(2);
+        this.result = (this.currjson.rates[this.count2]* this.amount).toFixed(2);
       }
 
     });
