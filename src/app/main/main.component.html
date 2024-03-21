@@ -1,0 +1,70 @@
+<div style="display: flex;height: 750px;justify-content: center;align-items: center;">
+    <div class="main-container">
+      <header>Valūtas kalkulators</header>
+      <div class= "selection-cont">
+        <input type="number" placeholder="Summa" [(ngModel)]="amount" step="0.01">
+        <select #c1 name="" id="country" (mouseleave)="changeBase(c1.value)">
+          <option value="EUR"> EUR Eiro </option>
+          <option value="USD"> USD ASV dolārs</option>
+          <option value="AUD"> AUD Austrālijas dolārs</option>
+          <option value="BRL"> BRL Brazīlijas reāls</option>
+          <option value="CHF"> CHF Šveices franki</option>
+          <option value="CNY"> CNY Ķīnas juaņa</option>
+          <option value="CZK"> CZK Čehijas krona</option>
+          <option value="DKK"> DKK Dānijas krona</option>
+          <option value="GBP"> GBP Lielbritānijas mārciņa</option>
+          <option value="HUF"> HUF Ungārijas forints</option>
+          <option value="ILS"> ILS Izraēlas šeikelis</option>
+          <option value="INR"> INR Indijas rūpija</option>
+          <option value="ISK"> ISK Islandes krona</option>
+          <option value="JPY"> JPY Japānas jēna</option>
+          <option value="KRW"> KRW Dienvidkorejas vona</option>
+          <option value="MXN"> MXN Meksikas peso</option>
+          <option value="NOK"> NOK Norvēģijas krona</option>
+          <option value="NZD"> NZD Jaunzēlandes dolārs</option>
+          <option value="PLN"> PLN Polijas zlots</option>
+          <option value="RON"> RON Rumānijas leja</option>
+          <option value="SEK"> SEK Zviedrijas krona</option>
+          <option value="SGD"> SGD Singapūras dolārs</option>
+          <option value="THB"> THB Taizemes bats</option>
+          <option value="TRY"> TRY Turcijas lira</option>
+        </select>
+        <p >uz</p>
+        <select #c2 name = "" id="country" (mouseleave)="toCountry(c2.value)">
+          <option value="EUR"> EUR Eiro </option>
+          <option value="USD"> USD ASV dolārs</option>
+          <option value="AUD"> AUD Austrālijas dolārs</option>
+          <option value="BRL"> BRL Brazīlijas reāls</option>
+          <option value="CHF"> CHF Šveices franki</option>
+          <option value="CNY"> CNY Ķīnas juaņa</option>
+          <option value="CZK"> CZK Čehijas krona</option>
+          <option value="DKK"> DKK Dānijas krona</option>
+          <option value="GBP"> GBP Lielbritānijas mārciņa</option>
+          <option value="HUF"> HUF Ungārijas forints</option>
+          <option value="ILS"> ILS Izraēlas šeikelis</option>
+          <option value="INR"> INR Indijas rūpija</option>
+          <option value="ISK"> ISK Islandes krona</option>
+          <option value="JPY"> JPY Japānas jēna</option>
+          <option value="KRW"> KRW Dienvidkorejas vona</option>
+          <option value="MXN"> MXN Meksikas peso</option>
+          <option value="NOK"> NOK Norvēģijas krona</option>
+          <option value="NZD"> NZD Jaunzēlandes dolārs</option>
+          <option value="PLN"> PLN Polijas zlots</option>
+          <option value="RON"> RON Rumānijas leja</option>
+          <option value="SEK"> SEK Zviedrijas krona</option>
+          <option value="SGD"> SGD Singapūras dolārs</option>
+          <option value="THB"> THB Taizemes bats</option>
+          <option value="TRY"> TRY Turcijas lira</option>
+        </select>
+      </div>
+      <button (click)="convert()">Konvertēt</button>
+      <div class="result-container" *ngIf="result !== null">
+        <p>{{amount}} {{base}}</p>
+        <p>=</p>
+        <p>{{result}} {{count2}}</p>
+      </div>
+      <div class="update">
+      Valūtas informācija atjaunota: {{update}}
+      </div>
+    </div>
+    </div>
