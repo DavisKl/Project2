@@ -39,7 +39,6 @@ export class MainComponent implements OnInit{
       this.amount = 0;
     }
 
-
     this.currency.getCurrencyData(this.base).subscribe(data => {
       this.update = data.date;
 
@@ -50,7 +49,6 @@ export class MainComponent implements OnInit{
 
       this.result = (this.currjson.rates[this.count2]* this.amount).toFixed(2);
       }
-
 
     });
 

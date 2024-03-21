@@ -9,7 +9,7 @@ header{
 
 .main-container{
     background-color: rgb(193, 198, 202);
-    width: 800px;
+    width: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,7 @@ input{
     border-radius: 10px;
     border: none;
     height: 30px;
-    width: 180px;
+    width:auto;
     font-weight: 700;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 
@@ -53,6 +53,7 @@ select{
     border-radius: 10px;
     border: none;
     height: 40px;
+    width: auto;
     font-weight: 700;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-right: 10px;
@@ -62,7 +63,6 @@ select{
 
 select:focus{
     outline: none;
-
 }
 
 option{
@@ -92,8 +92,7 @@ button:hover{
 .result-container{
     display: flex;
     background-color: white;
-    margin: 10px;
-    width: 200px;
+    width:max-content;
     justify-content: space-evenly;
     border-radius: 10px;
 }
